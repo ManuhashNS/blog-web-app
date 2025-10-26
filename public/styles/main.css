@@ -1,0 +1,33 @@
+.top-container{
+    background-color: #35374B;
+}
+.welcome-text{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.image{
+    height:180px;
+}
+.blogs-list{
+    background-color:#344955
+}
+.blogs-list-text{
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+.view-page{
+    background-color: #50727B;
+    height: 100vh;
+}
+.view-card{
+    padding-bottom: 5rem;
+}
+.write-page{
+    background-color: #78A083;
+    height: 100vh;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

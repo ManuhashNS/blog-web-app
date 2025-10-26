@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs View</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body class="view-page d-flex flex-column">
+    <div class="container-fluid flex-grow-1 text-center mb-4 d-flex justify-content-center py-5">
+        <div class="card" style="width: 40rem;">
+            <div class="card-body position-relative view-card">
+                <h5 class="card-title">
+                    <%= blog.title %>
+                </h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                    By <%= blog.author %> on <%= blog.date %>
+                </h6>
+                <p class="card-text">
+                    <%= blog.content %>
+                </p>
+                <div class="position-absolute bottom-0 start-0 p-3 d-flex">
+                    <a class="btn btn-primary me-2" href="/post/<%=blog.id%>/edit" role="button">Edit</a>
+                    <form action="/post/<%=blog.id%>/delete" method="post" >
+                    <button type="submit" class="btn btn-danger w-100">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer bg-dark text-white text-center py-3 align-self-end">
+        <p>
+            &copy; 2025 Blogs Page. All rights reserved.
+        </p>
+    </div>
+</body>
